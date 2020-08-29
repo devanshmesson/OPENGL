@@ -5,15 +5,16 @@
 #include<windows.h>
 
 
-
 void display();
 void display1();
 void reshape(int,int);
-void timer(int);
-
+void timer();
+int arr[]={8,7,6,3,4};
 void init()
 {
  glClearColor(150/255,249/255,1,1.0);
+
+
 }
 
 int main(int argc, char **argv)
@@ -39,10 +40,10 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
 
-    glColor3d(1,1,0);
+    //glColor3d(1,1,0);
     //glRasterPos2d(x,y);
-
     //glutBitmapCharacter(GLUT_BITMAP_TIMES_ROMAN_24,'4');
+
     glBegin(GL_POLYGON);
     glColor3d(1,1,0);
 
@@ -93,7 +94,8 @@ void reshape(int w, int h)
  glMatrixMode(GL_MODELVIEW);
 }
 float ok=0,yes=1,inx,ins;
-void timer(int)
+
+void timer()
 {
 
  glutPostRedisplay();
